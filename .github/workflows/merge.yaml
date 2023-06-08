@@ -1,0 +1,45 @@
+name: Merge
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: google-github-actions/release-please-action@51ee8ae2605bd5ce1cfdcc5938684908f1cd9f69 # v3.7.9
+        with:
+          release-type: simple
+          command: github-release
+  release-pr:
+    runs-on: ubuntu-latest
+
+    needs:
+      - release
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - id: get_token
+        uses: tibdex/github-app-token@b62528385c34dbc9f38e5f4225ac829252d1ea92 # v1.8.0
+        with:
+          app_id: ${{ secrets.BOT_APP_ID }}
+          private_key: ${{ secrets.BOT_PRIVATE_KEY }}
+      - uses: google-github-actions/release-please-action@51ee8ae2605bd5ce1cfdcc5938684908f1cd9f69 # v3.7.9
+        with:
+          token: ${{ steps.get_token.outputs.token }}
+          release-type: simple
+          fork: true
+          command: release-pr
