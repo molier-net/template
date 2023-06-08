@@ -17,6 +17,10 @@ lint:
     - markdownlint@0.34.0
     - prettier@2.8.8
     - yamllint@1.32.0
+  ignore:
+    - linters: [ALL]
+      paths:
+        - CHANGELOG.md
 runtimes:
   enabled:
     - go@1.19.5
