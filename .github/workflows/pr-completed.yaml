@@ -1,0 +1,21 @@
+name: Pull Request Completed
+
+on:
+  workflow_run:
+    workflows:
+      - Pull Request
+    types:
+      - completed
+
+permissions:
+  contents: read
+
+jobs:
+  trunk_annotate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@8e5e7e5ab8b370d6c329ec480221332ada57f0ab # v3.5.2
+      - uses: trunk-io/trunk-action@e5f1a3f123a2440f9cd28e036495a1c1f2a20568 # v1.1.1
+        with:
+          post-annotations: true
