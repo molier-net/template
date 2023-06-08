@@ -21,6 +21,14 @@ jobs:
         with:
           release-type: simple
           command: github-release
+  scorecard:
+    uses: ./.github/workflows/scorecard.yaml
+
+    permissions:
+      contents: read
+      security-events: write
+      id-token: write
+
   release-pr:
     runs-on: ubuntu-latest
 

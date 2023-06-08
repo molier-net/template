@@ -9,6 +9,13 @@ permissions:
   contents: read
 
 jobs:
+  scorecard:
+    uses: ./.github/workflows/scorecard.yaml
+
+    permissions:
+      contents: read
+      security-events: write
+      id-token: write
   trunk_upgrade:
     runs-on: ubuntu-latest
 
