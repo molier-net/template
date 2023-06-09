@@ -7,8 +7,7 @@ on:
     paths:
       - .trunk/trunk.yaml
 
-permissions:
-  contents: read
+permissions: read-all
 
 jobs:
   trunk-cache:
