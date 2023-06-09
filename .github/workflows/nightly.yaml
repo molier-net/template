@@ -6,7 +6,10 @@ on:
   workflow_dispatch: {}
 
 permissions:
+  actions: read
   contents: read
+  id-token: read
+  security-events: read
 
 jobs:
   scorecard:
