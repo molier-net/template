@@ -8,7 +8,7 @@ on:
 permissions:
   actions: read
   contents: read
-  id-token: read
+  id-token: none
   pull-requests: read
   security-events: read
 
