@@ -6,7 +6,7 @@ Only the latest version will be supported
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability within this project, please send an email to [Your Email Here] or create a confidential issue on our issue tracker. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this project, please send an email to remko.molier@googlemail.com or create a confidential issue on our issue tracker. All security vulnerabilities will be promptly addressed.
 
 Do NOT open an issue if you are disclosing a security vulnerability, instead send an email or use other secure methods to report the vulnerability.
 
