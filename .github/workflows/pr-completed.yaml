@@ -7,8 +7,7 @@ on:
     types:
       - completed
 
-permissions:
-  contents: read
+permissions: read-all
 
 jobs:
   trunk_annotate:
