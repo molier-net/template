@@ -1,7 +1,7 @@
 # Repository Template
 
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
-[![SemVer Badge](https://img.shields.io/badge/SemVer-3F4551?logo=semver&logoColor=white)]
+[![SemVer Badge](https://img.shields.io/badge/SemVer-3F4551?logo=semver&logoColor=white)](https://semver.org/spec/v2.0.0.html)
 [![OpenSSF
 Scorecard](https://api.securityscorecards.dev/projects/github.com/molier-net/template/badge)](https://api.securityscorecards.dev/projects/github.com/molier-net/template)
 
