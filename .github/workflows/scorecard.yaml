@@ -5,6 +5,8 @@ on:
 
 permissions:
   contents: read
+  id-token: read
+  security-events: read
 
 jobs:
   analysis:

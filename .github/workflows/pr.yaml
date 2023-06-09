@@ -10,7 +10,10 @@ on:
       - reopened
 
 permissions:
+  actions: read
+  checks: read
   contents: read
+  security-events: read
 
 jobs:
   trunk_check:
