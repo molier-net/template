@@ -10,6 +10,7 @@ permissions: read-all
 jobs:
   codeql:
     uses: ./.github/workflows/codeql.yaml
+
     permissions:
       actions: read
       contents: read
@@ -17,6 +18,7 @@ jobs:
 
   scorecard:
     uses: ./.github/workflows/scorecard.yaml
+
     permissions:
       contents: read
       security-events: write
@@ -24,11 +26,14 @@ jobs:
 
   release:
     runs-on: ubuntu-latest
+
     needs:
       - codeql
+
     permissions:
       contents: write
       pull-requests: write
+
     steps:
       - uses: step-security/harden-runner@128a63446a954579617e875aaab7d2978154e969 # v2.4.0
         with:
@@ -40,8 +45,10 @@ jobs:
 
   release-pr:
     runs-on: ubuntu-latest
+
     needs:
       - release
+
     steps:
       - uses: step-security/harden-runner@128a63446a954579617e875aaab7d2978154e969 # v2.4.0
         with:
