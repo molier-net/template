@@ -9,8 +9,8 @@ plugins:
 lint:
   enabled:
     - trivy@0.42.1
-    - semgrep@1.25.0
-    - checkov@2.3.285
+    - semgrep@1.26.0
+    - checkov@2.3.287
     - actionlint@1.6.24
     - git-diff-check
     - gitleaks@8.16.4
