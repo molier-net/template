@@ -4,13 +4,13 @@ cli:
 plugins:
   sources:
     - id: trunk
-      ref: v0.0.20
+      ref: v0.0.21
       uri: https://github.com/trunk-io/plugins
 lint:
   enabled:
     - trivy@0.42.1
     - semgrep@1.28.0
-    - checkov@2.3.300
+    - checkov@2.3.301
     - actionlint@1.6.25
     - git-diff-check
     - gitleaks@8.17.0
